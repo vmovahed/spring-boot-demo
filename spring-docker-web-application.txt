@@ -10,3 +10,11 @@
   - ./mvnw package
 6- Run application
   - java -jar target/spring-boot-docker-complete-0.0.1-SNAPSHOT.jar
+7- Create a Docker file
+    FROM openjdk:8-jdk-alpine
+    COPY target/spring-boot-docker-complete-0.0.1-SNAPSHOT.jar app.jar
+    ENTRYPOINT ["java","-jar","/app.jar"]
+8- Build docker image
+  - docker build -t springio/gs-spring-boot-docker .
+9- Run docker image
+  - docker run -p 8080:8080 springio/gs-spring-boot-docker
