@@ -23,3 +23,24 @@
   - docker build -t springio/gs-spring-boot-docker .
 11- Run docker image
   - docker run -p 8080:8080 springio/gs-spring-boot-docker
+
+Test case:
+
+...... Implementation .....
+class Calculator {
+    
+    public static int add(int x, int y){
+      return x + y;
+    }
+
+}
+...... Test case .....
+
+@Test
+public void testAdd() throws Exception {
+  int result = Calculator.add(10, 20);
+  assertEquals(30, result);
+}
+
+
+  
