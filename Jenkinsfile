@@ -1,3 +1,4 @@
+// comment 
 node {
    def mvnHome
    stage('Prepare') {
